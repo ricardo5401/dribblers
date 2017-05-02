@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  account_type_id: 1
+  payment_id: 1
+  expired_at: 2017-05-02 13:32:07
+
+two:
+  user_id: 1
+  account_type_id: 1
+  payment_id: 1
+  expired_at: 2017-05-02 13:32:07
