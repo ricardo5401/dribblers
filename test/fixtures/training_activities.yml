@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  training_plan_id: 1
+  shoot_count: 1
+  with_time: false
+  expected_time: 2017-05-02 19:17:42
+
+two:
+  training_plan_id: 1
+  shoot_count: 1
+  with_time: false
+  expected_time: 2017-05-02 19:17:42

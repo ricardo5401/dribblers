@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :activities
+  resources :events
+  resources :training_activities
+  resources :training_plans
+  resources :relationships
   resources :tips
   resources :payments
   resources :subscriptions

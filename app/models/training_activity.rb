@@ -1,0 +1,2 @@
+class TrainingActivity < ApplicationRecord
+end

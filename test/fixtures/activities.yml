@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  training_activity_id: 1
+  failed: 1
+  asserted: 1
+  startted_at: 2017-05-02 19:22:21
+  finished_at: 2017-05-02 19:22:21
+
+two:
+  user_id: 1
+  training_activity_id: 1
+  failed: 1
+  asserted: 1
+  startted_at: 2017-05-02 19:22:21
+  finished_at: 2017-05-02 19:22:21
