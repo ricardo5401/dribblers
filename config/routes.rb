@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :tips
+  resources :payments
   resources :subscriptions
   resources :account_types
   resources :users
