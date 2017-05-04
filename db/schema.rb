@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170502184417) do
+ActiveRecord::Schema.define(version: 20170502192221) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,11 +24,39 @@ ActiveRecord::Schema.define(version: 20170502184417) do
     t.datetime "updated_at",                         null: false
   end
 
+  create_table "activities", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "training_activity_id"
+    t.integer  "failed"
+    t.integer  "asserted"
+    t.datetime "startted_at"
+    t.datetime "finished_at"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "description"
+    t.datetime "event_date"
+    t.boolean  "private"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
   create_table "payments", force: :cascade do |t|
     t.integer  "subscription_id"
     t.float    "price"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+  end
+
+  create_table "relationships", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "friend_id"
+    t.integer  "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "subscriptions", force: :cascade do |t|
@@ -46,6 +74,22 @@ ActiveRecord::Schema.define(version: 20170502184417) do
     t.string   "description"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+  end
+
+  create_table "training_activities", force: :cascade do |t|
+    t.integer  "training_plan_id"
+    t.integer  "shoot_count"
+    t.boolean  "with_time"
+    t.datetime "expected_time"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  create_table "training_plans", force: :cascade do |t|
+    t.string   "name"
+    t.string   "shoot_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
