@@ -12,7 +12,7 @@ module Auth
   		user = User.new(email: params[:email], first_name: params[:first_name],
   					 last_name: params[:last_name])
   		if user.save!
-        token = params[:token] || JsonWebToken.encode(user_id: user.id)
+        token = JsonWebToken.encode(user_id: user.id)
   			user.update_attribute(:token, token)
   			respond(user)
   		else
