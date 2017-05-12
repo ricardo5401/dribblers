@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
   root 'home#home'
-  
+
+  post "/authorize/social" => "authentication#authenticate"
+
   namespace :v1 do
     resources :activities
     resources :events
