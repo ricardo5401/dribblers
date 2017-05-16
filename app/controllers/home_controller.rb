@@ -1,7 +1,7 @@
 class HomeController < HtmlController
-
+	layout "application"
+	
 	def home
-		render json: "welcome to dribblers"
 	end
 	
 end
