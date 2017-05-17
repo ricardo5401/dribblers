@@ -1,5 +1,5 @@
 module V1
-  class UsersController < ApplicationController
+  class UsersController < ApiController
     before_action :set_user, only: [:show, :update, :destroy]
 
     # GET /users

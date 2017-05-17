@@ -32,6 +32,6 @@ module Dribblers
     config.autoload_paths << Rails.root.join('lib')
     config.autoload_paths += Dir[File.join(Rails.root, "lib", "extension", "*.rb")].each {|l| require l }
 
-    config.api_only = true
+    config.api_only = false
   end
 end

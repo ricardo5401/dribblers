@@ -1,5 +1,5 @@
 module V1
-  class PaymentsController < ApplicationController
+  class PaymentsController < ApiController
     before_action :set_payment, only: [:show, :update, :destroy]
 
     # GET /payments

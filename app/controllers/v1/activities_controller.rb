@@ -1,5 +1,5 @@
 module V1
-  class ActivitiesController < ApplicationController
+  class ActivitiesController < ApiController
     before_action :set_activity, only: [:show, :update, :destroy]
 
     # GET /activities

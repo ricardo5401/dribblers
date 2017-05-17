@@ -1,5 +1,5 @@
 module V1
-  class RelationshipsController < ApplicationController
+  class RelationshipsController < ApiController
     before_action :set_relationship, only: [:show, :update, :destroy]
 
     # GET /relationships

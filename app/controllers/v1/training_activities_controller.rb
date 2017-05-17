@@ -1,5 +1,5 @@
 module V1
-  class TrainingActivitiesController < ApplicationController
+  class TrainingActivitiesController < ApiController
     before_action :set_training_activity, only: [:show, :update, :destroy]
 
     # GET /training_activities

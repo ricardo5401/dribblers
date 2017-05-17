@@ -1,5 +1,4 @@
-class HomeController < HtmlController
-	layout "application"
+class HomeController < ApplicationController
 	
 	def home
 	end

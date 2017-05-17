@@ -1,5 +1,5 @@
 module V1
-  class TipsController < ApplicationController
+  class TipsController < ApiController
     before_action :set_tip, only: [:show, :update, :destroy]
 
     # GET /tips

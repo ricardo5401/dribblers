@@ -1,18 +1,4 @@
-class ApplicationController < ActionController::API
-	before_action :authenticate
-
-
-	protected
-
-	def authenticate
-  	@current_user = Auth::ByToken.call(request.headers)
-  	render json: static_fails_message, status: 401 unless @current_user
-  end
-
-  def static_fails_message
-  	{ 
-  		status: 401,
-  		message: "unauthorized" 
-  	}
-  end
+class ApplicationController < ActionController::Base
+	layout "application"
+	
 end

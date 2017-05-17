@@ -1,5 +1,5 @@
 module V1
-  class SubscriptionsController < ApplicationController
+  class SubscriptionsController < ApiController
     before_action :set_subscription, only: [:show, :update, :destroy]
 
     # GET /subscriptions

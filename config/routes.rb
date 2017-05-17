@@ -1,6 +1,20 @@
 Rails.application.routes.draw do
+  
+  devise_for :admin
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
-  root 'home#home'
+  unauthenticated do
+    devise_scope :admin do
+      root to: "home#home"
+    end
+  end
+  
+  authenticated :admin do
+    devise_scope :admin do
+      root to: "rails_admin/main#dashboard"
+    end
+  end
+
 
   post "/authorize/social" => "authentication#authenticate"
 
@@ -16,5 +30,6 @@ Rails.application.routes.draw do
     resources :account_types
     resources :users
   end
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
