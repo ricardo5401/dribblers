@@ -29,6 +29,7 @@ Rails.application.routes.draw do
     resources :subscriptions
     resources :account_types
     resources :users
+    get "/users/:id/activities" => "users#activities"  #needs id (ejem id=1)
   end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

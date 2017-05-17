@@ -13,6 +13,11 @@ module V1
     def show
       render json: @user
     end
+    
+    def activities
+      result = Users::Activities.call(params)
+      render json: result, status: result[:status]
+    end
 
     # POST /users
     def create
