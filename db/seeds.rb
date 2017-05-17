@@ -10,8 +10,8 @@
   
   
   tp1 =TrainingPlan.create(name: "Beginer Shoot", shoot_type: "10 - 3 points")
-  tp2.create(name: "Advanced Shoot", shoot_type: "Long shoots")
-  tp3.create(name: "Great Shoot", shoot_type: "Long advanced")
+  tp2 = TrainingPlan.create(name: "Advanced Shoot", shoot_type: "Long shoots")
+  tp3 = TrainingPlan.create(name: "Great Shoot", shoot_type: "Long advanced")
   
   training = TrainingActivity.create(training_plan_id: tp1.id, shoot_count: 5, 
   description: "Ronda de 5 tiros de tres puntos sin cronómetro.", with_time: false, expected_time: DateTime.now )
