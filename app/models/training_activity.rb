@@ -1,3 +1,4 @@
 class TrainingActivity < ApplicationRecord
-	has_one :training_plan
+	belongs_to :training_plan
+	has_one :activity
 end
