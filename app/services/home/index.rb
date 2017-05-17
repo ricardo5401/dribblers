@@ -1,5 +1,5 @@
 module Home
-    class index
+    class Index
         def self.call(params = {})
             user = User.find_by(id: params[:id])
             user ? by_user(user) : respond
