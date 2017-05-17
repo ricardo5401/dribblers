@@ -1,0 +1,236 @@
+.dribblers-logo{
+  width: 60px;
+  height: 50px;
+  margin-top: -22px;
+  margin-left: -12px;
+  margin-right: -6px;
+}
+.vertical-nav{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.vertical-nav li{
+  text-align: left;
+  padding:5px;
+  padding-left:15px;
+}
+.vertical-nav li a{
+  color: gray!important;
+}
+.vertical-nav li a:hover, .vertical-nav > li > a.active{
+  color: #3d993d!important;
+  text-decoration: none;
+}
+.vertical-nav > li > a.active:before{
+  content: "■";
+  color:#3d993d;
+  padding-right: 5px;
+  margin-left:-15px;
+}
+/*INICIO MENU*/
+.g-menu{
+  height: 70px;
+  margin-right: 25px;
+}
+.g-menu ul li {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.g-menu ul li a{
+  font-size: 16px;
+  padding-top: 25px!important;
+  padding-bottom: 25px!important;
+  color: white;
+  padding-right: 0px!important;
+  padding-left: 0px!important;
+}
+.g-menu ul li a:hover{
+  background-color: transparent;
+  color: #3d993d!important;
+}
+.g-menu > ul > li > a:after{
+  content: "";
+  width: 100%;
+  height: 0;
+  background-color: #fff;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  opacity: 0;
+}
+.g-menu > ul > li > a:hover:after {
+    height: 1px;
+    top: 45px;
+    opacity: 1;
+    background-color: #3d993d;
+}
+.no-link:hover{
+  color: #1e9fb3!important;
+}
+.no-link{
+  text-decoration: none!important;
+  cursor: pointer;
+  color:white!important;
+  --webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+}
+.show_menu{
+  background-color: transparent; 
+  margin-right: 20px; 
+  margin-top: 17px; 
+  border: none;
+  display: none;
+}
+.menu
+{
+  list-style: none!important;
+  line-height: 42px!important;
+  margin: 1em auto!important;
+  /*outline: 1px solid red;*/
+  padding-left: 0!important;
+  z-index: 40;
+}
+.submenu{
+    z-index: 80;
+}
+
+.menu a
+{
+  color: #ddd!important;
+  display: block!important;
+  padding-left: 1em!important;
+  text-decoration: none!important;
+  --webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+  width: 100%!important;
+}
+
+.menu a:hover
+{
+  margin-left: 1em!important;
+}
+.icon-mobile-custom{
+font-size:16px!important;
+}
+.menu li
+{
+  box-shadow: 3px 0 rgba(255,255,255,.2) inset!important;
+  margin-bottom: 5px!important;
+  padding-left: .1em!important;
+  /*outline: 1px solid green;*/
+  --webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+  list-style:none!important;
+}
+
+.menu li:hover
+{
+  box-shadow: 18em 0 rgba(255,255,255,.2) inset!important;
+}
+.menu li.actives{
+  box-shadow: 18em 0 rgba(255,255,255,.2) inset!important;
+}
+
+.menu li.nohover:hover{
+  box-shadow: none!important;
+}
+
+.menu li:nth-child(2) a
+{
+  background-position: 0 -42px;
+}
+
+.menu li:nth-child(3) a
+{
+  background-position: 0 -84px!important;
+}
+
+.menu li:nth-child(4) a
+{
+  background-position: 0 -126px!important;
+}
+
+.menu li:nth-child(5) a
+{
+  background-position: 0 -168px!important;
+}
+
+.menu li:last-child a
+{
+  background-position: 0 -210px!important;
+}
+#menu-icono-title{
+margin-left: 2px;
+padding-right: 10px!important;
+color: white!important;
+}
+.menu li ul{
+display:none;
+}
+.menu li.nohover ul{
+    display:block;
+}
+.menu-label{
+  display: inline-block;
+}
+.menu-label.not-display{
+  display: none!important;
+}
+@media(max-width: 769px){
+  .vertical-nav{
+    width:100%;
+    text-align: center;
+  }
+  .vertical-nav li{
+    display: inline-block;
+    padding-bottom: 15px;
+  }
+  .col-sm-2, .col-sm-10{
+    width: 100%!important;
+  }
+}
+/*FIN MENU*/
+@media(max-width:767px){
+  #mostrar-nav{
+    display: block;
+  }
+  .nav-user{
+    display: none;
+  }
+  .menu-label.not-display{
+    display: inline-block!important;
+  }
+  nav.nav-mobile{
+    width: 17em!important;
+    left: -18em!important;
+  }
+  nav.nav-mobile.mostrar {
+    left: 0px!important;
+  }
+  .g-menu{
+    display:none;
+  }
+}
+
+/*POSICION RESPONSIVE MENU*/
+nav.nav-mobile {
+  background: black;
+  box-sizing: border-box;
+  left: 0;
+  height: 100%;
+  padding-right: .25em;
+  padding-top: 3em;
+  position: fixed;
+  top: 70px;
+  transition: all .3s;
+  z-index: 9;
+  width: 4.5em;
+}
+
+nav.nav-mobile.mostrar {
+  width: 17em;
+}
