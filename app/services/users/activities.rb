@@ -15,8 +15,7 @@ module Users
                 status: status,
                 activities: ActiveModelSerializers::SerializableResource.
                                 new(activities, each_serializer: ActivitySerializer),
-                training_plans: ActiveModelSerializers::SerializableResource.
-                                new(TrainingPlan.all, each_serializer: TrainingPlanSerializer)
+                training_plans: TrainingPlan.all
             }
         end
         
