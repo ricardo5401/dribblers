@@ -1,3 +1,4 @@
 class TrainingPlan < ApplicationRecord
-    has_many :training_activities
+	mount_uploader :picture, PictureUploader
+  has_many :training_activities
 end

@@ -43,3 +43,15 @@ gem 'rails_admin'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+
+gem 'aws-sdk', '~> 2'
+gem 'carrierwave'
+gem 's3_direct_upload'
+gem 'mini_magick'
+gem 'rmagick'
+gem 'fog'
+gem 'remotipart', '~> 1.2'
+gem 'jquery-fileupload-rails'
+# Better ENV Variables
+gem 'dotenv-rails'
