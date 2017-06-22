@@ -4,7 +4,7 @@ module V1
 
     # GET /training_activities
     def index
-      training_plan = TrainingPlan.find_by(id: params[:id])
+      training_plan = TrainingPlan.find_by(id: params[:plan_id])
       if training_plan
         @training_activities = training_plan.training_activities
       else
