@@ -4,7 +4,12 @@ module V1
 
     # GET /training_activities
     def index
-      @training_activities = TrainingActivity.all
+      training_plan = TrainingPlan.find_by(id: params[:id])
+      if training_plan
+        @training_activities = training_plan.training_activities
+      else
+        @training_activities = TrainingActivity.all
+      end
 
       render json: @training_activities
     end
