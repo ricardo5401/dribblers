@@ -6,6 +6,6 @@ if Rails.env.production? or ENV["PRODUCTION_TEST"] == 'true'
 			:aws_secret_access_key => ENV['S3_SECRET_KEY']
 
 		}
-		config.fog_directory = 'ubooks'
+		config.fog_directory = 'ubooksdevelopment'
 	end
 end
