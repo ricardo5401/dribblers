@@ -47,7 +47,7 @@ module V1
 
       # Only allow a trusted parameter "white list" through.
       def event_params
-        params.require(:event).permit(:user_id, :description, :event_date, :private)
+        params.require(:event).permit(:user_id, :description, :event_date, :is_public)
       end
   end
 
