@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20170704040753) do
     t.integer  "training_activity_id"
     t.integer  "failed"
     t.integer  "asserted"
-    t.datetime "startted_at"
+    t.datetime "started_at"
     t.datetime "finished_at"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false

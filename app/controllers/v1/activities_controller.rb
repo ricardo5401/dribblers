@@ -47,7 +47,7 @@ module V1
 
       # Only allow a trusted parameter "white list" through.
       def activity_params
-        params.require(:activity).permit(:user_id, :training_activity_id, :failed, :asserted, :startted_at, :finished_at)
+        params.require(:activity).permit(:user_id, :training_activity_id, :failed, :asserted, :started_at, :finished_at)
       end
   end
 
